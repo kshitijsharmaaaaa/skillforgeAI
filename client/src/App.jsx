@@ -304,35 +304,41 @@ function AppContent() {
             )}
 
             {idea && extracted && (
-              <div className="feature-card fade-in" style={{ marginTop: '2rem', padding: '2rem' }}>
-                <h3 className="gradient-text">🧠 AI Suggestion Breakdown</h3>
-                <div style={{ display: 'grid', gap: '1rem', marginBottom: '1.5rem' }}>
-                  <div className="stats-card">
-                    <p style={{ margin: '0', fontSize: '0.9rem', color: '#667eea', fontWeight: '600' }}>🔑 Project Title</p>
-                    <p style={{ margin: '0.5rem 0 0 0', fontSize: '1.1rem', fontWeight: '500' }}>{extracted.title || 'Not available'}</p>
-                  </div>
-                  <div className="stats-card">
-                    <p style={{ margin: '0', fontSize: '0.9rem', color: '#667eea', fontWeight: '600' }}>📖 Overview</p>
-                    <p style={{ margin: '0.5rem 0 0 0', fontSize: '1.1rem', fontWeight: '500' }}>{extracted.overview || 'Not available'}</p>
-                  </div>
-                  <div className="stats-card">
-                    <p style={{ margin: '0', fontSize: '0.9rem', color: '#667eea', fontWeight: '600' }}>🧰 Technologies</p>
-                    <p style={{ margin: '0.5rem 0 0 0', fontSize: '1.1rem', fontWeight: '500' }}>{extracted.technologies.length ? extracted.technologies.join(', ') : 'Not available'}</p>
-                  </div>
-                  <div className="stats-card">
-                    <p style={{ margin: '0', fontSize: '0.9rem', color: '#667eea', fontWeight: '600' }}>🛠️ Key Features</p>
-                    <ul style={{ margin: '0.5rem 0 0 0', paddingLeft: '1.5rem', textAlign: 'left' }}>
-                      {extracted.features.length ? extracted.features.map((f, i) => <li key={i} style={{ marginBottom: '0.25rem' }}>{f}</li>) : <li>Not available</li>}
-                    </ul>
-                  </div>
+              <div className="ai-breakdown-modal fade-in" style={{ marginTop: '2rem' }}>
+                <h2>🧠 AI Suggestion Breakdown</h2>
+                
+                <div className="ai-breakdown-item">
+                  <h3>🔑 Project Title</h3>
+                  <p>{extracted.title || 'Not available'}</p>
                 </div>
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                  <button onClick={saveIdea} className="success">
+                
+                <div className="ai-breakdown-item">
+                  <h3>📖 Overview</h3>
+                  <p>{extracted.overview || 'Not available'}</p>
+                </div>
+                
+                <div className="ai-breakdown-item">
+                  <h3>🧰 Technologies</h3>
+                  <p>{extracted.technologies.length ? extracted.technologies.join(', ') : 'Not available'}</p>
+                </div>
+                
+                <div className="ai-breakdown-item">
+                  <h3>🛠️ Key Features</h3>
+                  <p>
+                    {extracted.features.length ? 
+                      extracted.features.map((f, i) => <span key={i}>• {f}<br/></span>) : 
+                      'Not available'
+                    }
+                  </p>
+                </div>
+                
+                <div className="ai-breakdown-buttons">
+                  <button onClick={saveIdea} className="ai-breakdown-btn primary">
                     💾 Save Idea
                   </button>
                   <button
                     onClick={() => setIdea('')}
-                    className="secondary"
+                    className="ai-breakdown-btn secondary"
                   >
                     🔙 Back
                   </button>
