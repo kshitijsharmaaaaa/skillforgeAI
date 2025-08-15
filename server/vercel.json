@@ -8,8 +8,21 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/generate",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/generate-code",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/",
       "dest": "/index.js"
     }
-  ]
+  ],
+  "functions": {
+    "index.js": {
+      "maxDuration": 30
+    }
+  }
 }
