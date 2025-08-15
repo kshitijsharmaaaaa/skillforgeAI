@@ -6,10 +6,10 @@ import axios from 'axios';
 dotenv.config();
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: ['https://client-6v1nss2ly-kshitij-sharmas-projects-886ac018.vercel.app', 'http://localhost:5173'],
+  origin: ['http://localhost:5173', 'https://skillforge-ai-frontend.onrender.com'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -54,10 +54,7 @@ Your reply **must always** follow this format exactly:
 - Do NOT return 'N/A' or 'Not found'
 - If unsure, make up plausible data
 - Respond ONLY in this format, no extra explanation
-`,
-
-
-
+            `
           },
           {
             role: 'user',
@@ -80,7 +77,6 @@ Your reply **must always** follow this format exactly:
   }
 });
 
-
 app.post('/generate-code', async (req, res) => {
   const { projectType, feature } = req.body;
 
@@ -99,7 +95,7 @@ Always reply with ONLY code blocks without any explanation.
 
 Make the code as real-world ready as possible.
 
-Never say "I’m an AI..." or any intro text. Only return clean code in markdown format.
+Never say "I'm an AI..." or any intro text. Only return clean code in markdown format.
             `
           },
           {
@@ -122,7 +118,6 @@ Never say "I’m an AI..." or any intro text. Only return clean code in markdown
     res.status(500).json({ error: 'Failed to generate code' });
   }
 });
-
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
