@@ -136,7 +136,8 @@ function AppContent() {
     setGeneratedCode('');
 
     try {
-      const res = await fetch("http://localhost:3001/generate-code", {
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://skillforgeai.onrender.com';
+      const res = await fetch(`${API_BASE_URL}/generate-code`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ projectType: codePrompt, feature: codeFeatures }),
