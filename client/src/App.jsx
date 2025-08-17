@@ -426,6 +426,121 @@ function AppContent() {
             )}
           </div>
         </div>
+
+        {/* ✨ Features Section */}
+        <div id="features" className="hero-section" style={{ padding: '3rem 1rem', minHeight: '100vh' }}>
+          <div className="card slide-in" style={{
+            maxWidth: '1200px',
+            margin: 'auto',
+            textAlign: 'center'
+          }}>
+            <h2 className="gradient-text" style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>✨ Features</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', padding: '0 1rem' }}>
+              
+              <div className="feature-card floating" style={{ padding: '2rem', textAlign: 'center' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🤖</div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.5rem', fontWeight: '700', textShadow: '0 3px 6px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6)', marginBottom: '1rem' }}>AI Project Ideas</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  Get unique, innovative project ideas tailored to your interests and skills. Perfect for portfolios and learning.
+                </p>
+              </div>
+
+              <div className="feature-card floating" style={{ padding: '2rem', textAlign: 'center' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>💻</div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.5rem', fontWeight: '700', textShadow: '0 3px 6px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6)', marginBottom: '1rem' }}>Code Generation</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  Generate working code snippets and boilerplates for any project type. Ready-to-use, production-ready code.
+                </p>
+              </div>
+
+              <div className="feature-card floating" style={{ padding: '2rem', textAlign: 'center' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>💾</div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.5rem', fontWeight: '700', textShadow: '0 3px 6px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6)', marginBottom: '1rem' }}>Save & Organize</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  Save your favorite ideas and code snippets. Access them anytime from your personal dashboard.
+                </p>
+              </div>
+
+              <div className="feature-card floating" style={{ padding: '2rem', textAlign: 'center' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🚀</div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.5rem', fontWeight: '700', textShadow: '0 3px 6px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6)', marginBottom: '1rem' }}>Instant Results</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  Get AI-powered suggestions and code in seconds. No waiting, no complex setup required.
+                </p>
+              </div>
+
+              <div className="feature-card floating" style={{ padding: '2rem', textAlign: 'center' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📱</div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.5rem', fontWeight: '700', textShadow: '0 3px 6px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6)', marginBottom: '1rem' }}>Responsive Design</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  Beautiful, modern interface that works perfectly on all devices - desktop, tablet, and mobile.
+                </p>
+              </div>
+
+              <div className="feature-card floating" style={{ padding: '2rem', textAlign: 'center' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.5rem', fontWeight: '700', textShadow: '0 3px 6px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6)', marginBottom: '1rem' }}>Secure & Private</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  Your data is secure with Firebase authentication. Your ideas and code are private and protected.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 📞 Contact Section */}
+        <div id="contact" className="hero-section" style={{ padding: '3rem 1rem', minHeight: '100vh' }}>
+          <div className="card slide-in" style={{
+            maxWidth: '800px',
+            margin: 'auto',
+            textAlign: 'center'
+          }}>
+            <h2 className="gradient-text" style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>📞 Contact Us</h2>
+            <p style={{ color: '#ffffff', fontSize: '1.3rem', fontWeight: '600', textShadow: '0 3px 6px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6)', marginBottom: '2rem' }}>
+              Have questions or suggestions? We'd love to hear from you!
+            </p>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
+              <div className="stats-card" style={{ padding: '2rem' }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📧</div>
+                <h3 style={{ color: '#667eea', fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem' }}>Email</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)', wordBreak: 'break-all' }}>
+                  sharmakshtij154@gmail.com
+                </p>
+              </div>
+
+              <div className="stats-card" style={{ padding: '2rem' }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🌐</div>
+                <h3 style={{ color: '#667eea', fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem' }}>Website</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  skillforgeai-1.onrender.com
+                </p>
+              </div>
+
+              <div className="stats-card" style={{ padding: '2rem' }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💼</div>
+                <h3 style={{ color: '#667eea', fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem' }}>GitHub</h3>
+                <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                  github.com/kshitijsharmaaaaa
+                </p>
+              </div>
+            </div>
+
+            <div className="stats-card" style={{ padding: '2rem', marginTop: '2rem' }}>
+              <h3 style={{ color: '#667eea', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>🚀 Ready to Get Started?</h3>
+              <p style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)', marginBottom: '1.5rem' }}>
+                Join thousands of developers who are already using SkillForge AI to build amazing projects!
+              </p>
+              <button 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="primary"
+                style={{ fontSize: '1.1rem', padding: '1rem 2rem' }}
+              >
+                🚀 Start Creating Now
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
